@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.registers.RegisterActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textSize="30sp"
+                android:layout_marginEnd="120dp"
+                android:textColor="@android:color/black"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+
+                android:id="@+id/nameTLL">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_register_person_color"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/name"
+                    android:hint="@string/name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+                android:id="@+id/emaiTLL">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:drawableStart="@drawable/ic_register_mail_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:inputType="textEmailAddress"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/email"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+                app:passwordToggleEnabled="true"
+                android:id="@+id/passwordTLL">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:drawableStart="@drawable/ic_register_password_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/password"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--                <com.hbb20.CountryCodePicker-->
+                <!--                    android:layout_width="100dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:id="@+id/code"-->
+                <!--                    app:ccp_textSize="10sp"-->
+                <!--                    android:layout_marginTop="40dp"-->
+                <!--                    android:layout_marginRight="150dp"-->
+                <!--                    app:ccp_autoDetectCountry="true"-->
+                <!--                    app:ccp_showNameCode="true"/>-->
+                <RelativeLayout
+                    android:id="@+id/circle_p"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/colour_circle"
+                    android:elevation="10dp"
+                    android:padding="20dp">
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/progressbar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="1dp"
+                    android:layout_marginVertical="1dp"
+                    android:id="@+id/phoneTLL">
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/phone"
+                        android:drawableStart="@drawable/ic_register_phone_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:drawablePadding="10dp"
+                        android:digits="0123456789"
+                        android:maxLength="11"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+                android:id="@+id/addressTLL">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:drawableStart="@drawable/ic_register_location_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPostalAddress"
+                    android:id="@+id/address"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/location"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+                android:id="@+id/birthTLL">
+                <com.google.android.material.textview.MaterialTextView
+                    android:drawableStart="@drawable/ic_register_birth_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="date"
+                    android:id="@+id/birth"
+                    android:textStyle="italic"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="1dp"
+                    android:hint="@string/date_of_birth"/>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/grey">
+                </View>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+                android:id="@+id/genderTLL">
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_register_gender_color"
+                    android:inputType="text"
+                    android:id="@+id/gender"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="39dp"
+                    android:hint="@string/gender"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--        <com.rengwuxian.materialedittext.MaterialEditText-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:drawablePadding="10dp"-->
+            <!--            android:inputType=""-->
+            <!--            android:id="@+id/gender"-->
+            <!--            android:layout_marginTop="10dp"-->
+            <!--            app:met_floatingLabel="highlight"-->
+            <!--            android:hint="gender"/>-->
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_continue"
+                android:id="@+id/btn_register"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"/>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="....................OR..................."
+                    android:textAlignment="center">
+                </TextView>
+            </LinearLayout>
+
+            <!--            <com.google.android.gms.common.SignInButton-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:elevation="10dp"-->
+            <!--                android:text="@string/sign_up_using_google"-->
+            <!--                >-->
+            <!--            </com.google.android.gms.common.SignInButton>-->
+
+            <Button
+                android:id="@+id/googleLoginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/common_signin_button_text_long"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/common_google_signin_btn_icon_dark"
+                android:background="@drawable/rounded_button"
+                />
+
+            <Button
+                android:id="@+id/btn_already"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/already"
+                android:layout_marginTop="2dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.repassword.RecoverpassActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout"/>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgotten"
+        android:padding="30sp"
+        android:textColor="@android:color/black"
+        android:layout_margin="0dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="65dp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:layout_marginTop="29dp"
+        android:textColor="@android:color/black"
+        android:padding="30sp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="0dp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/sent_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:textSize="15sp"
+        android:layout_marginStart="30dp"
+        android:text="@string/enter_your_email_here_and_follow_instruction"
+        android:layout_below="@id/text_view"
+        />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/sent_mail"
+        android:drawableStart="@drawable/ic_register_mail_color"
+        android:id="@+id/reset_mail"
+        android:drawablePadding="10dp"
+        app:met_floatingLabel="normal"
+        android:inputType="textEmailAddress"
+        android:hint="@string/your_email_here"/>
+
+    <RelativeLayout
+        android:id="@+id/circle_p"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/colour_circle"
+        android:elevation="10dp"
+        android:padding="20dp">
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressbar"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_reset_password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_below="@id/reset_mail"
+        android:textColor="@color/white"
+        android:text="@string/reset_password"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/back"
+        android:background="@null"
+        android:layout_below="@id/btn_reset_password"
+        android:textColor="@color/colorPrimaryDark"/>
+
+</RelativeLayout>

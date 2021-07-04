@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_marginBottom="1dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="1dp"
+    android:focusable="true"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/white"
+   >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--offline icons-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileTvs"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+       android:src="@drawable/ic_default_person_color"
+        />
+
+    <ImageView
+        android:id="@+id/onlineStatusTvs"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameTvs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#CD000000"
+        android:textSize="17sp"
+        android:text=""
+        android:layout_toEndOf="@id/profileTvs">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/last_messageTvs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTvs"
+        android:text=""
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@id/profileTvs">
+    </com.google.android.material.textview.MaterialTextView>
+    <ImageView
+        android:id="@+id/blockIv"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_unblock_green"
+        android:contentDescription="Unblocked">
+    </ImageView>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

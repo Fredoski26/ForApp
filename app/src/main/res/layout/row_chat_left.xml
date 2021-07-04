@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/messageLayout"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/row_cha_left_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:civ_border_color="@null"
+        android:src="@drawable/ic_profile_post">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/row_chat_left_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:background="@drawable/background_left"
+        android:textSize="15sp"
+        android:text=""
+        android:visibility="gone"
+        android:padding="15dp"
+        android:layout_weight="1">
+    </com.google.android.material.textview.MaterialTextView>
+
+        <ImageView
+            android:id="@+id/messageImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_image_send"
+            android:background="@drawable/background_left"
+            android:padding="15dp">
+        </ImageView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/row_chat_left_timeTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="                                       "
+            android:textColor="@color/black"
+            android:textSize="12sp">
+        </com.google.android.material.textview.MaterialTextView>
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/row_chat_left_timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="89dp"
+        android:textSize="12sp">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/row_chat_left_deliver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text=""
+        android:visibility="gone"
+        android:layout_marginTop="34dp"
+        android:textAlignment="textEnd">
+    </com.google.android.material.textview.MaterialTextView>
+
+
+</LinearLayout>

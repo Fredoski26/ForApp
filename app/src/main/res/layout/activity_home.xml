@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/box"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.home.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout2"/>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/show_online"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textStyle="bold">
+    </com.google.android.material.textview.MaterialTextView>
+<!--    <com.google.android.material.circularreveal.CircularRevealFrameLayout-->
+<!--        android:id="@+id/content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1">-->
+
+<!--    </com.google.android.material.circularreveal.CircularRevealFrameLayout>-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1">-->
+
+<!--    </FrameLayout>-->
+
+
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:id="@+id/profile_image"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/username"-->
+<!--        android:layout_marginLeft="25dp"-->
+<!--        android:text=""-->
+<!--        android:textColor="#fff"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:textSize="15sp"/>-->
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hapticFeedbackEnabled="true"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/menu_nav">
+
+            <TextView
+                android:id="@+id/unseen_count"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:text=""
+                android:maxLines="1"
+                android:maxLength="3"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginStart="305dp"
+                android:layout_marginTop="18dp"/>
+
+<!--            This not yet programmed-->
+            <TextView
+                android:id="@+id/unseen_notification"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:text=""
+                android:maxLines="1"
+                android:maxLength="3"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginStart="379dp"
+                android:layout_marginTop="18dp"/>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "638786213924",
+    "firebase_url": "https://forange-socialmedia.firebaseio.com",
+    "project_id": "forange-socialmedia",
+    "storage_bucket": "forange-socialmedia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638786213924:android:d8cbc89350a75d69b560b1",
+        "android_client_info": {
+          "package_name": "com.fredrick.forapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638786213924-r0ctulsuglsr6k6r11d9i4rp2irodsg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0GwUNgHpakfdKnkRfx4BEg_k-qei6W84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638786213924-r0ctulsuglsr6k6r11d9i4rp2irodsg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
